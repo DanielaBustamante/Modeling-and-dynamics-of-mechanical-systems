@@ -5,8 +5,8 @@ df = pd.read_csv('Tabla_temperaturas.csv')
    
 # a) Generar una tercera columna con los promedios diarios.
 
-# Calculamos el promedio de las columnas 2 y 3 para cada fila
-promedios = df.iloc[:, 1:3].mean(axis=1)
+# Calculamos el promedio de las columnas 1 y 2 para cada fila
+promedios = df.iloc[:, 0:2].mean(axis=1)
 
 # Agregamos la columna de promedios al dataframe
 df['promedio'] = promedios
