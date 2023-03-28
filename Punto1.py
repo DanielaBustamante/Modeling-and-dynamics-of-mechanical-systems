@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Leemos el archivo CSV y lo almacenamos en un dataframe
-df = pd.read_csv('Tabla_temperaturas.csv')
+df = pd.read_csv('tabla_temperaturas.csv')
    
 # a) Generar una tercera columna con los promedios diarios.
 
@@ -12,7 +12,7 @@ promedios = df.iloc[:, 0:2].mean(axis=1)
 df['promedio'] = promedios
 
 # Guardamos el dataframe con la columna adicional en un nuevo archivo CSV
-df.to_csv('ruta/nuevo_archivo.csv', index=False)
+df.to_csv('promedio_temperaturas.csv', index=False)
 
 # b) Encontrar los promedios de las temperaturas máximas y mínimas del mes. 
 
