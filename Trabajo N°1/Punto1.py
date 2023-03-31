@@ -56,3 +56,19 @@ column2 = data.iloc[1:28, 2]
 promedio = column2.mean()
 
 print("El promedio de las temperaturas minimas es:", promedio)
+
+# PUNTO 1C
+
+# Leer archivo CSV
+data = pd.read_csv('Trabajo N°1/promedios.csv')
+
+# Seleccionar las filas desde la fila 1 hasta la fila 28 y las columnas 1, 2 y 3.
+selected_data = data.iloc[1:28, 1:3]
+
+# Encontrar el valor máximo y mínimo de todas las columnas.
+max_value = selected_data.max().max()
+min_value = selected_data.min().min()
+
+# Imprimir los valores máximos y mínimos.
+print("Valor máximo: ", max_value)
+print("Valor mínimo: ", min_value)
