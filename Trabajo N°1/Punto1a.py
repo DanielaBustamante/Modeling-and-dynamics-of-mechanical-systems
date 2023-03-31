@@ -17,10 +17,10 @@ with open('Trabajo N°1/tabla_temperaturas.csv', 'r+', newline='') as tabla_temp
     # Iterar sobre cada fila del archivo CSV
     for fila in csv_reader:
         # Convertir los valores de las primeras dos columnas a números y calcular el promedio
-        promedio = (float(fila[1]) + float(fila[2])) / 2
+        Promedio = (float(fila[1]) + float(fila[2])) / 2
 
         # Agregar el promedio como un tercer valor en la fila
-        fila.append(promedio)
+        fila.append(Promedio)
 
         # Agregar la fila actualizada a la lista de filas actualizadas
         filas_actualizadas.append(fila)
