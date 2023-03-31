@@ -24,8 +24,14 @@ B_vector=[8;3;-4;-7]
 disp('Calculamos el determinante de la matriz de los coeficientes')
 Det=det(B)
 disp('Calculamos la inversa')
-%Como es distinto de 0 podemos calcular la matriz inversa
-Bi=inv(B)
+%Como es 0 NO podemos calcular la matriz inversa
+
+% Ponemos la ultima fila toda positiva
+B_nueva=[2,4,-7,5;4,0,-1,0;6,4,-6,8;2,4,7,5]
+disp('Calculamos el determinante de la matriz de los coeficientes')
+Det=det(B_nueva)
+disp('Calculamos la inversa')
+Bi=inv(B_nueva)
 disp('Solucion del sistema')
 %Calculo la solucion del sistema como Ai*B
 Sol=Bi*B_vector
