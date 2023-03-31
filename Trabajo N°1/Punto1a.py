@@ -1,5 +1,7 @@
 import csv
 
+# PUNTO 1A
+
 # Abrir el archivo CSV en modo de lectura y escritura
 with open('Trabajo N°1/tabla_temperaturas.csv', 'r+', newline='') as tabla_temperaturas:
     # Leer el archivo CSV con el módulo csv
@@ -33,3 +35,24 @@ with open('Trabajo N°1/tabla_temperaturas.csv', 'r+', newline='') as tabla_temp
 
         # Escribir las filas actualizadas en el archivo actualizado
         csv_writer.writerows(filas_actualizadas)
+
+# PUNTO 1B
+
+import pandas as pd
+
+# Leer archivo CSV
+data = pd.read_csv('Trabajo N°1/tabla_temperaturas.csv')
+
+column1 = data.iloc[1:28, 1]
+
+# Calcular el promedio de la columna seleccionada.
+promedio = column1.mean()
+
+print("El promedio de las temperaturas maximas es:", promedio)
+
+column2 = data.iloc[1:28, 2]
+
+# Calcular el promedio de la columna seleccionada.
+promedio = column2.mean()
+
+print("El promedio de las temperaturas minimas es:", promedio)
