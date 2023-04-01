@@ -28,9 +28,12 @@ plt.yticks(np.arange(0, 11, 2))
 # Agrega una etiqueta para el eje x y y utilizando las funciones xlabel y ylabel
 plt.xlabel('x')
 plt.ylabel('y')
+plt.title('Grafico de temperaturas')
 
 # Agrega los valores de z como etiquetas de texto para cada curva de nivel
-plt.clabel(contour, inline=True, fontsize=8)
+plt.contourf(contour)
+# plt.clabel(contour, inline=True, fontsize=8)
+plt.colorbar()
 
 # Muestra el gráfico
 plt.show()
