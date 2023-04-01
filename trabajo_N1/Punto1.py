@@ -3,7 +3,7 @@ import csv
 # PUNTO 1A
 
 # Abrir el archivo CSV en modo de lectura y escritura
-with open('Trabajo N°1/tabla_temperaturas.csv', 'r+', newline='') as tabla_temperaturas:
+with open('trabajo_N1/tabla_temperaturas.csv', 'r+', newline='') as tabla_temperaturas:
     # Leer el archivo CSV con el módulo csv
     csv_reader = csv.reader(tabla_temperaturas)
     
@@ -28,7 +28,7 @@ with open('Trabajo N°1/tabla_temperaturas.csv', 'r+', newline='') as tabla_temp
         filas_actualizadas.append(fila)
 
     # Escribir las filas actualizadas en un nuevo archivo CSV
-    with open('Trabajo N°1/promedios.csv', 'w', newline='') as tabla_actualizada:
+    with open('trabajo_N1/promedios.csv', 'w', newline='') as tabla_actualizada:
         # Escribir los encabezados de las columnas en el archivo actualizado
         csv_writer = csv.writer(tabla_actualizada)
         csv_writer.writerow(encabezados)
@@ -41,7 +41,7 @@ with open('Trabajo N°1/tabla_temperaturas.csv', 'r+', newline='') as tabla_temp
 import pandas as pd
 
 # Leer archivo CSV
-data = pd.read_csv('Trabajo N°1/tabla_temperaturas.csv')
+data = pd.read_csv('trabajo_N1/tabla_temperaturas.csv')
 
 column1 = data.iloc[1:28, 1]
 
@@ -60,7 +60,7 @@ print("El promedio de las temperaturas minimas es:", promedio)
 # PUNTO 1C
 
 # Leer archivo CSV
-data = pd.read_csv('Trabajo N°1/promedios.csv')
+data = pd.read_csv('trabajo_N1/promedios.csv')
 
 # Seleccionar las filas desde la fila 1 hasta la fila 28 y las columnas 1, 2 y 3.
 selected_data = data.iloc[1:28, 1:3]
