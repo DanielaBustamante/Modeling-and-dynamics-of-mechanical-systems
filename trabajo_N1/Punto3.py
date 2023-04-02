@@ -39,7 +39,7 @@ diag = np.diag(data)
 plt.plot(diag, 'o')
 plt.xlabel('Índice')
 plt.ylabel('Temperatura')
-plt.title('Valores de la diagonal')
+plt.title('Valores de la diagonal x=y')
 plt.show()
 # b2: Línea y=5
 # Extraer los valores correspondientes a la fila y=5
@@ -51,11 +51,12 @@ plt.ylabel('Temperatura')
 plt.title('Valores de la fila y=5')
 plt.show()
 # b3: Línea x=5
-# Extraer los valores correspondientes a la fila y=5
+# Extraer los valores correspondientes a la columna x=5
 columna = data[:, 5]
 # Crear una gráfica simple de los valores de la fila
+# Crear una gráfica simple de los valores de la columna
 plt.plot(columna, 'o')
 plt.xlabel('Índice')
 plt.ylabel('Temperatura')
-plt.title('Valores de la fila x=5')
+plt.title('Valores de la columna x=5')
 plt.show()
