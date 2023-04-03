@@ -56,6 +56,13 @@ print("Valor mínimo: ", min_value)
 # Colocar título, etiquetas en los ejes y grilla reticulada.
 import pandas as pd
 import matplotlib.pyplot as plt
+# Carga el archivo CSV en un DataFrame de pandas
 df = pd.read_csv('trabajo_N1/promedios.csv')
-df.plot(x='Max', y=['Min', 'promedio'])
+# Crea el gráfico con etiquetas en los ejes y una grilla reticulada
+ax = df.plot(x='Dia', y=['Min', 'Max', 'promedio'])
+ax.set_xlabel('Dias')
+ax.set_ylabel('Temperaturas')
+ax.set_title('Febrero de 2019 en Bs. As.')
+ax.grid(True)
+# Muestra el gráfico en la pantalla o guarda el gráfico en un archivo
 plt.show()
