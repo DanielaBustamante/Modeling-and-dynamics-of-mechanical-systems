@@ -14,7 +14,7 @@ print('')
 # Armamos el vector
 A_vector = np.array([2, -5, 1, 9]).reshape(-1, 1)
 print('Calculamos el determinante de la matriz de los coeficientes:')
-Det = np.linalg.det(A)
+Det = int(np.linalg.det(A))
 print(Det)
 print('')
 print('Calculamos la inversa:')
@@ -40,7 +40,7 @@ B = np.array([[2, 4, -7, 5],
 B_vector = np.array([8, 3, -4, -7]).reshape(-1, 1)
 print('Calculamos el determinante de la matriz de los coeficientes')
 # Calculamos el determinante
-Det = np.linalg.det(B)
+Det = int(np.linalg.det(B))
 print(Det)
 print('')
 print('Como el deteminante es 0 NO podemos calcular la matriz inversa')
@@ -52,7 +52,7 @@ B_nueva = np.array([[2, 4, -7, 5],
                     [2, 4, 7, 5]])
 print('Calculamos el determinante de la matriz de los coeficientes nueva')
 # Calculamos el determinante
-Det = np.linalg.det(B_nueva)
+Det = int(np.linalg.det(B_nueva))
 print(Det)
 print('')
 print('Calculamos la inversa nueva')
