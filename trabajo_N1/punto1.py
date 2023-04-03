@@ -50,3 +50,7 @@ min_value = selected_data.min().min()
 # Imprimir los valores máximos y mínimos.
 print("Valor máximo: ", max_value)
 print("Valor mínimo: ", min_value)
+
+# PUNTO 1D
+# Graficar los máximos, mínimos y promedios del mes en un solo gráfico. 
+# Colocar título, etiquetas en los ejes y grilla reticulada. 
