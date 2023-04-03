@@ -53,7 +53,6 @@ plt.show()
 # b3: Línea x=5
 # Extraer los valores correspondientes a la columna x=5
 columna = data[:, 5]
-# Crear una gráfica simple de los valores de la fila
 # Crear una gráfica simple de los valores de la columna
 plt.plot(columna, 'o')
 plt.xlabel('Índice')
