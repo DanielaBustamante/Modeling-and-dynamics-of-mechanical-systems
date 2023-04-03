@@ -19,7 +19,7 @@ with open('trabajo_N1/tabla_temperaturas.csv', 'r+', newline='') as tabla_temper
         # Agregar la fila actualizada a la lista de filas actualizadas
         filas_actualizadas.append(fila)
     # Escribir las filas actualizadas en un nuevo archivo CSV
-    with open('trabajo_N1/promedios.csv', 'w', newline='') as tabla_actualizada:
+    with open('trabajo_N1/Promedios.csv', 'w', newline='') as tabla_actualizada:
         # Escribir los encabezados de las columnas en el archivo actualizado
         csv_writer = csv.writer(tabla_actualizada)
         csv_writer.writerow(encabezados)
@@ -54,40 +54,8 @@ print("Valor mínimo: ", min_value)
 # PUNTO 1D
 # Graficar los máximos, mínimos y promedios del mes en un solo gráfico. 
 # Colocar título, etiquetas en los ejes y grilla reticulada.
-import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
-from scipy.interpolate import griddata
-# Leer los datos del archivo CSV
-data = np.genfromtxt('./grilla_temperaturas.csv', delimiter=',')
-# Extrae las columnas z, x, z de los datos leídos
-x = data[1:11, 0]
-y = data[0,1:11]
-z = data[1:11, 1:11]
-# Crea una cuadrícula de coordenadas xi y yi utilizando la función meshgrid de numpy
-xi = np.linspace(0, 10, 10)
-yi = np.linspace(0, 10, 10)
-xi, yi = np.meshgrid(xi, yi)
-# Crea el gráfico de curvas de nivel utilizando la función contour de matplotlib
-contour = plt.contour(xi, yi, z, levels=10)
-# Establece los valores y etiquetas para los ticks en los ejes x e y utilizando las funciones xticks y yticks
-plt.xticks(np.arange(0, 11, 2))
-plt.yticks(np.arange(0, 11, 2))
-# Agrega una etiqueta para el eje x y y utilizando las funciones xlabel y ylabel
-plt.xlabel('x')
-plt.ylabel('y')
-plt.title('Grafico de temperaturas maximas, minimas y promedios')
-# Agrega los valores de z como etiquetas de texto para cada curva de nivel
-plt.contourf(contour)
-# plt.clabel(contour, inline=True, fontsize=8)
-plt.colorbar()
-# Muestra el gráfico
-plt.show()
-# Extraer los valores correspondientes a las columnas 1,2 y 3
-columna = data[:, 1]
-# Crear una gráfica simple de los valores de la fila
-# Crear una gráfica simple de los valores de la columna
-plt.plot(columna, 'o')
-plt.xlabel('Índice')
-plt.ylabel('Temperatura')
-plt.title('Valores de la columna x=5')
+df = pd.read_csv('trabajo_N1/promedios.csv')
+df.plot(x='Max', y=['Min', 'promedio'])
 plt.show()
