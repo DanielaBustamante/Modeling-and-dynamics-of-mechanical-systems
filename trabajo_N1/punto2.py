@@ -39,7 +39,7 @@ except np.linalg.LinAlgError:
 # c) Calcular la traspuesta y la inversa de cada matriz.
 # Dejando la última fila toda positiva:
 print('')
-B_nueva = np.array([[2, 4, -7, 5], [4, 0, -1, 0], [6, 4, -6, 8], [2, 4, 7, 5]])
+B_nueva = np.array([[2, 4, -7, 5], [4, 0, -1, 0], [6, 4, -6, 8], [-2, -4, -7, -5]])
 print("La traspuesta de la nueva matriz B es:\n", np.transpose(B_nueva))
 try:
     print("La inversa de la nueva matriz B es:\n", np.linalg.inv(B_nueva))
@@ -47,9 +47,13 @@ except np.linalg.LinAlgError:
     print("La inversa de la nueva matriz B no se puede calcular debido a que su determinante es cero.")
 # Cambiando la columna de ceros por 1:
 print('')
-C_nueva = np.array([[2, 4, -7, 1], [4, 3, -1, 1], [4, 3, -1, 1], [4, 3, -1, 1]])
+C_nueva = np.array([[2, 4, -7, 1], [4, 3, -1, 2], [6, 4, -6, 3], [-2, 2, 6, 4]])
 print("La traspuesta de la nueva matriz C es:\n", np.transpose(C_nueva))
-print("La inversa de la nueva matriz C es:\n", np.linalg.inv(C_nueva))
+try:
+    print("La inversa de la nueva matriz C es:\n", np.linalg.inv(C_nueva))
+except np.linalg.LinAlgError:
+    print("La inversa de la nueva matriz C no se puede calcular debido a que su determinante es cero.")
+print('')
 
 # PUNTO 2D
 # d) Obtener los siguientes vectores fila de cada matriz:
@@ -60,6 +64,7 @@ print("La diagonal principal de B_nueva es")
 print(np.diag(B_nueva))
 print("La diagonal principal de C_nueva es")
 print(np.diag(C_nueva))
+print('')
 # d2=[fila 3]  
 print("La fila 3 de A es")
 print(A[2,:])
@@ -67,6 +72,7 @@ print("La fila 3 de B_nueva es")
 print(B_nueva[3,:])
 print("La fila 3 de C_nueva es")
 print(C_nueva[3,:])
+print('')
 # d3=[columna 3]  
 print("La columna 3 de A es")
 print(A[:,3])
@@ -74,6 +80,7 @@ print("La columna 3 de B_nueva es")
 print(B_nueva[:,3])
 print("La columna 3 de C_nueva es")
 print(C_nueva[:,3])
+print('')
 
 # PUNTO 2E
 # e) Obtener las siguientes matrices de cada matriz:
