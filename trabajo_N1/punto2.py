@@ -67,7 +67,7 @@ print(np.diag(C_nueva))
 print('')
 # d2=[fila 3]  
 print("La fila 3 de A es")
-print(A[2,:])
+print(A[3,:])
 print("La fila 3 de B_nueva es")
 print(B_nueva[3,:])
 print("La fila 3 de C_nueva es")
@@ -85,44 +85,48 @@ print('')
 # PUNTO 2E
 # e) Obtener las siguientes matrices de cada matriz:
 # e1=[filas 1 y 2 x columnas 2 y 3]
-print("Las filas 1 y 2 de cada matriz:")
+# print("Las filas 1 y 2 de cada matriz:")
 A_filas1y2 = np.concatenate((A[0:2, :],))
 B_nueva_filas1y2 = np.concatenate((B_nueva[0:2, :],))
 C_nueva_filas1y2 = np.concatenate((C_nueva[0:2, :],))
-
-print("Las columnas 2 y 3 de cada matriz:")
+#print("Las columnas 2 y 3 de cada matriz:")
 A_columnas2y3 = A[:, 1:3]
 B_nueva_columnas2y3 = B_nueva[:, 1:3]
 C_nueva_columnas2y3 = C_nueva[:, 1:3]
-
 print("Las matrices obtenidas de multiplicar las filas 1 y 2 por columnas 2 y 3:")
 Matriz1 = np.dot(A_filas1y2, A_columnas2y3)
+print("Matriz 1:"), print(Matriz1)
 Matriz2 = np.dot(B_nueva_filas1y2, B_nueva_columnas2y3)
+print("Matriz 2:"), print(Matriz2)
 Matriz3 = np.dot(C_nueva_filas1y2, C_nueva_columnas2y3)
+print("Matriz 3:"), print(Matriz3)
 
 # e2=[filas 3 y 4 x columnas 2 y 3]
-print("Las filas 3 y 4 de cada matriz:")
+# print("Las filas 3 y 4 de cada matriz:")
 A_filas3y4 = np.concatenate((A[2:4, :],))
 B_nueva_filas3y4 = np.concatenate((B_nueva[2:4, :],))
 C_nueva_filas3y4 = np.concatenate((C_nueva[2:4, :],))
-
 print("Las matrices obtenidas de multiplicar las filas 3 y 4 por columnas 2 y 3:")
 Matriz4 = np.dot(A_filas3y4, A_columnas2y3)
+print("Matriz 4:"), print(Matriz4)
 Matriz5 = np.dot(B_nueva_filas3y4, B_nueva_columnas2y3)
+print("Matriz 5:"), print(Matriz5)
 Matriz6 = np.dot(C_nueva_filas3y4, C_nueva_columnas2y3)
+print("Matriz 6:"), print(Matriz6)
 
 # e3=[columnas 1 y 4 x filas 3 y 4]
-print("Las columnas 1 y 4 de cada matriz:")
+# print("Las columnas 1 y 4 de cada matriz:")
 A_columnas1y4 = A[:, [0, 3]]
 B_nueva_columnas1y4 = B_nueva[:, [0, 3]]
 C_nueva_columnas1y4 = C_nueva[:, [0, 3]]
-
-print("Las filas 3 y 4 de cada matriz:")
+# print("Las filas 3 y 4 de cada matriz:")
 A_filas3y4 = np.concatenate((A[2:4, :],))
 B_nueva_filas3y4 = np.concatenate((B_nueva[2:4, :],))
 C_nueva_filas3y4 = np.concatenate((C_nueva[2:4, :],))
-
 print("Las matrices obtenidas de multiplicar las columnas 1 y 4 por filas 3 y 4:")
 Matriz7 = np.dot(A_filas3y4, A_columnas1y4)
+print("Matriz 7:"), print(Matriz7)
 Matriz8 = np.dot(B_nueva_filas3y4, B_nueva_columnas1y4)
+print("Matriz 8:"), print(Matriz8)
 Matriz9 = np.dot(C_nueva_filas3y4, C_nueva_columnas1y4)
+print("Matriz 9:"), print(Matriz9)
