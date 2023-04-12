@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.interpolate import griddata
 # Leer los datos del archivo CSV
-data = np.genfromtxt('trabajo_N1/grilla_temperaturas.csv', delimiter=',')
+data = np.genfromtxt('trabajo_optativo_1/grilla_temperaturas.csv', delimiter=',')
 # Extrae las columnas z, x, z de los datos leídos
 x = data[1:11, 0]
 y = data[0,1:11]

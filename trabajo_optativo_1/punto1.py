@@ -1,7 +1,7 @@
 # PUNTO 1A
 import csv
 # Abrir el archivo CSV en modo de lectura y escritura
-with open('trabajo_N1/tabla_temperaturas.csv', 'r+', newline='') as tabla_temperaturas:
+with open('trabajo_optativo_1/tabla_temperaturas.csv', 'r+', newline='') as tabla_temperaturas:
     # Leer el archivo CSV con el módulo csv
     csv_reader = csv.reader(tabla_temperaturas)
     # Obtener los encabezados de las columnas
@@ -19,7 +19,7 @@ with open('trabajo_N1/tabla_temperaturas.csv', 'r+', newline='') as tabla_temper
         # Agregar la fila actualizada a la lista de filas actualizadas
         filas_actualizadas.append(fila)
     # Escribir las filas actualizadas en un nuevo archivo CSV
-    with open('trabajo_N1/Promedios.csv', 'w', newline='') as tabla_actualizada:
+    with open('trabajo_optativo_1/Promedios.csv', 'w', newline='') as tabla_actualizada:
         # Escribir los encabezados de las columnas en el archivo actualizado
         csv_writer = csv.writer(tabla_actualizada)
         csv_writer.writerow(encabezados)
@@ -29,7 +29,7 @@ with open('trabajo_N1/tabla_temperaturas.csv', 'r+', newline='') as tabla_temper
 # PUNTO 1B
 import pandas as pd
 # Leer archivo CSV
-data = pd.read_csv('trabajo_N1/tabla_temperaturas.csv')
+data = pd.read_csv('trabajo_optativo_1/tabla_temperaturas.csv')
 column1 = data.iloc[1:28, 1]
 # Calcular el promedio de la columna seleccionada.
 promedio = column1.mean()
@@ -41,7 +41,7 @@ print("El promedio de las temperaturas minimas es:", promedio)
 
 # PUNTO 1C
 # Leer archivo CSV
-data = pd.read_csv('trabajo_N1/promedios.csv')
+data = pd.read_csv('trabajo_optativo_1/promedios.csv')
 # Seleccionar las filas desde la fila 1 hasta la fila 28 y las columnas 1, 2 y 3.
 selected_data = data.iloc[1:28, 1:3]
 # Encontrar el valor máximo y mínimo de todas las columnas.
@@ -57,7 +57,7 @@ print("Valor mínimo: ", min_value)
 import pandas as pd
 import matplotlib.pyplot as plt
 # Carga el archivo CSV en un DataFrame de pandas
-df = pd.read_csv('trabajo_N1/promedios.csv')
+df = pd.read_csv('trabajo_optativo_1/promedios.csv')
 # Crea el gráfico con etiquetas en los ejes y una grilla reticulada
 ax = df.plot(x='Dia', y=['Min', 'Max', 'promedio'])
 ax.set_xlabel('Dias')
