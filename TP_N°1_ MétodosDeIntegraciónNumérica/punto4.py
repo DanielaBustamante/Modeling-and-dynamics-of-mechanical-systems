@@ -15,7 +15,6 @@ def integral_trapecio(n=1, funcion=fx, err=0.1, at=1, bt=1, integral_calculada=1
             I[i] = (fx(a) + fx(b)) * dx / 2
         for j in range(n):
             It = It + I[j]
-
         error_actual = np.abs(integral_calculada - It)
         n += 1
     return n
@@ -33,11 +32,9 @@ def integral_simpson(n=1, funcion=fx, err=0.1, at=1, bt=1, integral_calculada=1)
             I[i] = (fx(a) + 4*fx(m) + fx(b)) * dx / 6
         for j in range(n):
             It = It + I[j]
-
         error_actual = np.abs(integral_calculada - It)
         n += 1
     return n
-
 
 if __name__ == "__main__":
      n = integral_trapecio(
