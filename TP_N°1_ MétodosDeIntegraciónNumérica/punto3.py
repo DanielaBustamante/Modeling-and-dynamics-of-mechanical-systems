@@ -7,20 +7,20 @@ f = np.array([2.7183, 3.0042, 3.3201, 3.6693, 4.0552, 4.4817, 4.9530, 5.4739, 6.
 # Definimos los límites de integración
 a, b = 1, 2
 
-# Calculamos la integral definida utilizando el método de trapecios
+# Calculamos la integral utilizando el método de trapecios
 dx = (b - a) / (len(x) - 1)
-integral_trapezoid = dx / 2 * (f[0] + 2 * np.sum(f[1:-1]) + f[-1])
-print("Integral definida (trapecios):", integral_trapezoid)
+integral_t = dx / 2 * (f[0] + 2 * np.sum(f[1:-1]) + f[-1])
+print("Integral por el metodo de trapecios:", integral_t)
 
 # Calculamos la integral definida utilizando el método de punto medio
 dx = (b - a) / len(x)
-integral_midpoint = dx * np.sum(f[:-1] + f[1:]) / 2
-print("Integral definida (punto medio):", integral_midpoint)
+integral_pm = dx * np.sum(f[:-1] + f[1:]) / 2
+print("Integral por el metodo del punto medio:", integral_pm)
 
 # Calculamos la integral definida utilizando el método de Simpson
 n = len(x) - 1
 dx = (b - a) / n
 x_nodes = np.linspace(a, b, n+1)
 f_nodes = np.interp(x_nodes, x, f)
-integral_simpson = dx / 3 * (f_nodes[0] + 4 * np.sum(f_nodes[1:-1:2]) + 2 * np.sum(f_nodes[2:-1:2]) + f_nodes[-1])
-print("Integral definida (Simpson):", integral_simpson)
+integral_s = dx / 3 * (f_nodes[0] + 4 * np.sum(f_nodes[1:-1:2]) + 2 * np.sum(f_nodes[2:-1:2]) + f_nodes[-1])
+print("Integral por el metodo de Simpson:", integral_s)
